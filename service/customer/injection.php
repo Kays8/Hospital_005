@@ -22,11 +22,8 @@ if(isset($_GET['P_name'])&& $_GET['P_name']!=null)
 {
     $sql = "SELECT * FROM patient,permissions WHERE patient.P_id = permissions.P_CID AND P_name LIKE CONCAT('%', :P_name, '%')";
 
-
      echo "<br>" . " sql =
         " .$sql . "<br>";
-    
-    
     
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':P_name',$_GET['P_name']);

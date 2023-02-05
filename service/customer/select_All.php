@@ -32,10 +32,12 @@
         
         <tr>
             <td><?php echo $result["P_id"]; ?></td>
+
             <td>
             <a href="detail.php?P_Name=<?php echo $result["P_Name"]; ?>">
             <?php echo $result["P_Name"]; ?>
             </td>
+            
             <td><?php echo $result["P_DOB"]; ?></td>
             <td><?php echo $result["P_debt"]; ?></td>
             <td><?php echo $result["P_UserName"]; ?></td>
