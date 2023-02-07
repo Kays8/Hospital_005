@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>005-Thirayut</title>
 </head>
 <body>
@@ -12,7 +13,7 @@
         $strP_Name = $_GET["P_Name"];
     }
     require_once "../connect.php";
-    $sql = "SELECT P_id,P_Name,P_UserName FROM patient,permissions WHERE patient.P_id = permissions.P_CID AND P_Name = ?";
+    $sql = "SELECT P_id,P_Name,P_Username FROM patient,permissions WHERE patient.P_id = permissions.P_CID AND P_Name = ?";
     $params = array($strP_Name);
     $stmt = $conn->prepare($sql);
     $stmt->execute($params);
@@ -32,7 +33,7 @@
 
         <tr>
             <th width="130">บัญชีผู้ใช้</th>
-            <td><?php echo $result["P_UserName"]; ?></td>
+            <td><?php echo $result["P_Username"]; ?></td>
         </tr>
 
     </table>

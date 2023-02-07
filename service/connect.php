@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
     
 <?php
 
-    $serv = "mysql:host=localhost;dbname=hospital_005;charset=UTF8";
+    $serv = "mysql:host=localhost;dbname=hospital;charset=UTF8";
     $username = "root";
     $password = "";
 
@@ -18,7 +19,7 @@
         $conn = new PDO($serv, $username, $password);
 
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        echo "Connecting to Database!";
+        //echo "Connecting to Database!";
 
     } catch(PDOException $e) {
         echo "Connection failed: " . $e->getMessage();
