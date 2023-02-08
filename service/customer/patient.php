@@ -36,7 +36,7 @@
         </tr>
         <tr>
             <th width="130">บัญชีผู้ใช้</th>
-            <td><?php echo $result["P_UserName"]; ?></td>
+            <td><?php echo $result["P_Username"]; ?></td>
         </tr>
     </table>
 
